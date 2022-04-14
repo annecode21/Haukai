@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--This will set the viewport of the page, which will give the browser
+        instructions on how to control the page's dimensions and scaling for a
+        responsive web page design-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!--Reference to css style sheet-->
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body class="home">
+    <div class="container">
+        <div class="navbar">
+            <nav>
+                <ul id="menuList">
+
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Menu.html">Food</a></li>
+                    <li><a href="Reservations.html">Reservations</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <img src="Images/open-menu.png" class="menu-icon" onclick="togglemenu()">
+        </div>
+
+        <div class="row">
+            <div class="home-col">
+                <h2>HAUKAI</h2>
+                <h3>Restaurant</h3>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCGYOzQkz7hhQLXFjW0YQPtf4RLQrwqfbtfLct_TBWu5gFOw/viewform"><button class="button button1">MAKE A RESERVATION</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="About.html">Privacy Statement</a>
+        <a href="https://www.flaticon.com/free-icons/open-menu" title="open menu icons">Open menu icons created by Uniconlabs - Flaticon</a>
+    </div>
+
+    <script>
+        var menuList = document.getElementById("menuList");
+        menuList.style.maxHeight = "0px";
+        function togglemenu() {
+            if (menuList.style.maxHeight == "0px") {
+                menuList.style.maxHeight = "130px";
+            }
+            else {
+                menuList.style.maxHeight = "0px";
+            }
+        }
+    </script>
+</body>
+</html>
