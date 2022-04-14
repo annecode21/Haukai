@@ -1,0 +1,407 @@
+/*Css styling for all pages*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.menu-icon {
+    margin: 1em;
+    width: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+    nav ul li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 30px;
+    }
+
+        nav ul li .active {
+            background-color: #025234;
+        }
+        /* Add an active class to highlight the current page */
+        nav ul li a {
+            float: right;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+            /* Change the color of links on hover */
+            nav ul li a:hover {
+                background-color: #025234;
+                color: white;
+            }
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 200px 0;
+}
+
+@media only screen and (max-width:700px) {
+    nav ul {
+        width: 100%;
+        position: absolute;
+        right: 0;
+        z-index: 2;
+    }
+
+        nav ul li {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #menuList {
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .row {
+        flex-direction: column-reverse;
+        margin: 50px 0;
+    }
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: rgb(1, 20, 12);
+}
+
+/*Css styling for home page*/
+body.home {
+    background-image: url('Images/fernbackground.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.home-col {
+    position: relative;
+    flex-basis: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+    .home-col h2 {
+        font-size: 16vw;
+        color: white;
+        font-weight: 100;
+        margin: 0em 1em 0 1em;
+    }
+
+    .home-col h3 {
+        font-size: 4vw;
+        color: white;
+        margin: 0 1em 1em 1em;
+    }
+
+.button {
+    background-color: transparent;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.button1 {
+    color: white;
+    border: 2px solid black;
+    margin-bottom: 0;
+}
+
+    .button1:hover {
+        background-color: #025234;
+        color: white;
+    }
+
+/*Css styling for contact page*/
+body.contact {
+    background-image: url('Images/green.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.contact-col {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+    .contact-col hr {
+        color: white;
+        font-weight: 1vw;
+    }
+
+    .contact-col h2 {
+        font-size: 6vw;
+        color: white;
+        font-weight: 100;
+        text-align: center;
+    }
+
+    .contact-col h3 {
+        font-size: 4vw;
+        color: white;
+        font-weight: 100;
+        margin: 1em 0 0.5em 0;
+    }
+
+    .contact-col p {
+        color: white;
+        margin: 1em 0 2em 0;
+    }
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+    .map-responsive iframe {
+        left: 0;
+        top: 0;
+        height: 400vw;
+        width: 600vw;
+        position: absolute;
+    }
+
+@media only screen and (max-width:700px) {
+    .contact-col {
+        max-width: 100%;
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+
+        .contact-col p {
+            font-size: 12px;
+        }
+
+    .map-responsive iframe {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+/*Css styling for menu page*/
+.slideshow-container h2 {
+    font-size: 6vw;
+    color: white;
+    font-weight: 100;
+    text-align: center;
+}
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    padding: 8px 12px;
+    text-align: center;
+}
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next, .text {
+        font-size: 11px
+    }
+}
+
+.photos {
+    position: relative;
+    margin: auto;
+}
+
+.food {
+    width: 300px;
+    cursor: pointer;
+    margin: 10px;
+}
+/*Css styling for reservations page*/
+.reserve-col {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+    .reserve-col hr {
+        color: white;
+        font-weight: 1vw;
+    }
+
+    .reserve-col h2 {
+        font-size: 6vw;
+        color: white;
+        font-weight: 100;
+        text-align: center;
+    }
+
+    .reserve-col h3 {
+        font-size: 3vw;
+        color: white;
+        font-weight: 100;
+        margin: 1em 0 0.5em 0;
+    }
+
+    .reserve-col p {
+        color: white;
+        margin: 1em 0 2em 0;
+    }
+
+.button2 {
+    color: white;
+    border: 2px solid black;
+    margin: 1em 2em 1em 2em;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #012719;
+    color: white;
+}
+/*Css styling for reservations page*/
+.about-col hr {
+    color: white;
+    font-weight: 1vw;
+}
+
+.about-col h2 {
+    font-size: 6vw;
+    color: white;
+    font-weight: 100;
+    text-align: center;
+}
+
+.about-col h3 {
+    font-size: 3vw;
+    color: white;
+    font-weight: 100;
+    margin: 1em 0 0.5em 0;
+}
+
+.about-col {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+    .about-col p {
+        color: white;
+        margin: 1em 0 1em 0;
+    }
+/*Css styling for about*/
+.foodtable {
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+@media only screen and (max-width:700px) {
+    .about-col {
+        max-width: 100%;
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+
+        .about-col p {
+            font-size: 12px;
+        }
+
+    .foodtable {
+        width: 100%;
+        cursor: pointer;
+    }
+}

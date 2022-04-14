@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--This will set the viewport of the page, which will give the browser 
+        instructions on how to control the page's dimensions and scaling for a 
+        responsive web page design-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Page</title>
+    <!--Reference to css style sheet-->
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body class="contact">
+    <div class="container">
+        <div class="navbar">
+            <nav>
+                <ul id="menuList">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a class="active" href="Menu.html">Food</a></li>
+                    <li><a href="Reservations.html">Reservations</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="Login.html">Login</a></li>
+                </ul>
+            </nav>
+            <img src="Images/open-menu.png" class="menu-icon" onclick="togglemenu()">
+        </div>
+
+        <div class="row">
+            <div class="photos">
+                <img src="Images/noodles.jpg" class="food">
+                <img src="Images/foodtable.jpg" class="food">
+                <img src="Images/pies.jpg" class="food">
+
+            </div>
+            <div class="slideshow-container">
+                <h2>KAI | FOOD</h2>
+                <hr>
+                <br>
+                <div class="mySlides fade">
+                  <img src="Images/0001.jpg" style="width:100%">
+                  <div class="text">Cover</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <img src="Images/0002.jpg" style="width:100%">
+                  <div class="text">Appetizers</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <img src="Images/0003.jpg" style="width:100%">
+                  <div class="text">Mains and Desserts</div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="Images/0004.jpg" style="width:100%">
+                    <div class="text">Beverages</div>
+                  </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                  </div>
+
+                </div>
+                <br>
+                
+                <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>
+            
+        </div>
+    </div>
+    
+    <div class="footer">
+        <a href="About.html">Privacy Statement</a>
+        <a href='https://www.freepik.com/photos/food-flat-lay'>Food flat lay photo created by freepik - www.freepik.com</a>
+        <a href='https://www.freepik.com/photos/gastronomy'>Gastronomy photo created by freepik - www.freepik.com</a>
+        <a href='https://www.freepik.com/photos/food-flatlay'>Food flatlay photo created by freepik - www.freepik.com</a>
+    </div>
+
+    <script>
+        var menuList = document.getElementById("menuList");
+        menuList.style.maxHeight = "0px";
+        function togglemenu(){
+            if (menuList.style.maxHeight == "0px"){
+                menuList.style.maxHeight = "130px";
+            }
+            else {
+                menuList.style.maxHeight = "0px";
+            }
+        }
+    </script>
+</body>
+</html>

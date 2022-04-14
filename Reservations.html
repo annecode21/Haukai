@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--This will set the viewport of the page, which will give the browser
+        instructions on how to control the page's dimensions and scaling for a
+        responsive web page design-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations Page</title>
+    <!--Reference to css style sheet-->
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body class="contact">
+    <div class="container">
+        <div class="navbar">
+            <nav>
+                <ul id="menuList">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Menu.html">Food</a></li>
+                    <li><a class="active" href="Reservations.html">Reservations</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="Login.html">Login</a></li>
+                </ul>
+            </nav>
+            <img src="Images/open-menu.png" class="menu-icon" onclick="togglemenu()">
+        </div>
+
+        <div class="row">
+            <div class="reserve-col">
+                <h2>RESERVATIONS</h2>
+                <hr>
+                <h3>RESERVATION FAQS</h3>
+                <p>BOOKINGS</p>
+                <p>
+                    Please make a reservation for dinner using the attached form below. Walk ins will only be allowed if there is available room.
+                    We reserve the right to decline any walk ins.
+                </p>
+                <hr>
+                <p>CANCELLATION POLICY</p>
+                <p>
+                    If you need to cancel your reservation, you may do so by following the link in the confirmation email you receive, by
+                    emailing info@haukai.co.nz or calling us on 09 401 4019.
+                </p>
+                <hr>
+                <p>DIETARY REQUIREMENTS</p>
+                <p>
+                    Please ensure to note any dietary requirements when making your booking. If you have any further questions regarding our
+                    dietary requirements policy, please email info@haukai.co.nz or call 09 401 4019 before making your booking so we can discuss the necessary arrangements.
+                </p>
+                <hr>
+                <p>PRIVATE EVENTS AND LARGER BOOKINGS</p>
+                <p>
+                    HAUKAI is available for private events outside of our normal opening days. These can be for lunches, dinners, or other occasions.
+                </p>
+                <hr>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCGYOzQkz7hhQLXFjW0YQPtf4RLQrwqfbtfLct_TBWu5gFOw/viewform" class="button button2">
+                    MAKE A RESERVATION
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="About.html">Privacy Statement</a>
+    </div>
+
+    <script>
+        var menuList = document.getElementById("menuList");
+        menuList.style.maxHeight = "0px";
+        function togglemenu() {
+            if (menuList.style.maxHeight == "0px") {
+                menuList.style.maxHeight = "130px";
+            }
+            else {
+                menuList.style.maxHeight = "0px";
+            }
+        }
+    </script>
+</body>
+</html>
