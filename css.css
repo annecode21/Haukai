@@ -96,7 +96,6 @@ nav {
     color: white;
     background: rgb(1, 20, 12);
 }
-
 /*Css styling for home page*/
 body.home {
     background-image: url('Images/fernbackground.jpg');
@@ -155,34 +154,46 @@ body.contact {
 }
 
 .contact-col {
-    flex-basis: 40%;
-    display: flex;
+    flex-basis: 100%;
     flex-direction: column;
 }
 
-    .contact-col hr {
-        color: white;
-        font-weight: 1vw;
-    }
+.contact-col1 {
+    flex-basis: 100%;
+    float: left;
+}
 
-    .contact-col h2 {
-        font-size: 6vw;
-        color: white;
-        font-weight: 100;
-        text-align: center;
-    }
+.left {
+    width: 60%;
+    margin: 2vw 0 0 0;
+}
 
-    .contact-col h3 {
-        font-size: 4vw;
-        color: white;
-        font-weight: 100;
-        margin: 1em 0 0.5em 0;
-    }
+.right {
+    width: 40%;
+}
 
-    .contact-col p {
-        color: white;
-        margin: 1em 0 2em 0;
-    }
+.contact-col hr {
+    color: white;
+}
+
+.contact-col h2 {
+    font-size: 6vw;
+    color: white;
+    font-weight: 100;
+    text-align: center;
+}
+
+.contact-col h3 {
+    font-size: 3vw;
+    color: white;
+    font-weight: 100;
+    margin: 1em 0 0.5em 0;
+}
+
+.contact-col p {
+    color: white;
+    margin: 1em 0 2em 0;
+}
 
 .map-responsive {
     overflow: hidden;
@@ -320,11 +331,13 @@ body.contact {
     flex-basis: 100%;
     float: left;
 }
-.left{
-    width:60%;
+
+.left {
+    width: 60%;
 }
-.right{
-    width:40%;
+
+.right {
+    width: 40%;
 }
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
@@ -332,28 +345,29 @@ body.contact {
         width: 100%;
     }
 }
-    .reserve-col hr {
-        color: white;
-    }
 
-    .reserve-col h2 {
-        font-size: 6vw;
-        color: white;
-        font-weight: 100;
-        text-align: center;
-    }
+.reserve-col hr {
+    color: white;
+}
 
-    .reserve-col h3 {
-        font-size: 3vw;
-        color: white;
-        font-weight: 100;
-        margin: 1em 0 0.5em 0;
-    }
+.reserve-col h2 {
+    font-size: 6vw;
+    color: white;
+    font-weight: 100;
+    text-align: center;
+}
 
-    .reserve-col p {
-        color: white;
-        margin: 1em 0 2em 0;
-    }
+.reserve-col h3 {
+    font-size: 3vw;
+    color: white;
+    font-weight: 100;
+    margin: 1em 0 0.5em 0;
+}
+
+.reserve-col p {
+    color: white;
+    margin: 1em 0 2em 0;
+}
 
 .button2 {
     color: white;
@@ -366,10 +380,19 @@ body.contact {
     background-color: #012719;
     color: white;
 }
-/*Css styling for reservations page*/
+/*Css styling for about page*/
+.about-col {
+    flex-basis: 100%;
+    flex-direction: column;
+}
+
+.about-col1 {
+    flex-basis: 100%;
+    float: left;
+}
+
 .about-col hr {
     color: white;
-    font-weight: 1vw;
 }
 
 .about-col h2 {
@@ -380,22 +403,20 @@ body.contact {
 }
 
 .about-col h3 {
-    font-size: 3vw;
+    font-size: 4vw;
     color: white;
     font-weight: 100;
     margin: 1em 0 0.5em 0;
-}
-
-.about-col {
-    flex-basis: 40%;
-    display: flex;
-    flex-direction: column;
 }
 
     .about-col p {
         color: white;
         margin: 1em 0 1em 0;
     }
+
+.image-col{
+    margin:2vw;
+}
 /*Css styling for about*/
 .foodtable {
     width: 100%;
