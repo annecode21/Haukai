@@ -2,10 +2,66 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Matahi Historical Society homepage</title>
+    <title>Staff Login</title>
 </head>
 <body>
     <p>This is a dummy page for demonstrating how you use htaccess.</p>
-    <p>Click <a href="https://serene-badlands-70075.herokuapp.com/">here</a> to access the private page.</p>
+    
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!--This will set the viewport of the page, which will give the browser
+        instructions on how to control the page's dimensions and scaling for a
+        responsive web page design-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!--Reference to css style sheet-->
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body class="contact">
+    <div class="container">
+        <div class="navbar">
+            <nav>
+                <ul id="menuList">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="active" href="About.html">About</a></li>
+                    <li><a href="Menu.html">Food</a></li>
+                    <li><a href="Reservations.html">Reservations</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="Login.html">Login</a></li>
+                </ul>
+            </nav>
+            <img src="Images/open-menu.png" class="menu-icon" onclick="togglemenu()">
+        </div>
+
+        <div class="row">
+            <div class="home-col">
+         
+                <h3>LOGIN</h3>
+                <a href="https://serene-badlands-70075.herokuapp.com/"><button class="button button1">LOGIN HERE</button></a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>ALL RIGHTS RESERVED. ©COPYRIGHT 2022 THE HAUKAI RESTAURANT.</p>
+            <p><a href="About.html">Privacy Statement</a></p>
+        </div>
+
+        <script>
+            var menuList = document.getElementById("menuList");
+            menuList.style.maxHeight = "0px";
+            function togglemenu() {
+                if (menuList.style.maxHeight == "0px") {
+                    menuList.style.maxHeight = "130px";
+                }
+                else {
+                    menuList.style.maxHeight = "0px";
+                }
+            }
+        </script>
 </body>
 </html>
