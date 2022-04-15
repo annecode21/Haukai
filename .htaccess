@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Please login for access"
+AuthUserFile C:/Users/chiam/Desktop/BIT 607/Assignment 3/Assignment/.htpassword
+Require valid-user
