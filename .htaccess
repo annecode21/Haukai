@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Please login for access"
-AuthUserFile annecode21.github.io/.htpassword
-Require valid-user
