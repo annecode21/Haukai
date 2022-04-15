@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "Please login for access"
-AuthUserFile "Private/haukai-annecode21/www/.htpassword"
+AuthUserFile "Private/annecode21.github.io/.htpassword"
 Require valid-user
