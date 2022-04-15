@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "Please login for access"
-AuthUserFile "/app/www/.htpassword"
+AuthUserFile "/app/.htpassword"
 Require valid-user
